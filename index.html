@@ -4,30 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <style>
+        body{
+            margin-top: 55px;
+            margin-left: 226px;
+        }
+        #finalOutput{
+            margin-left: 155px;
+            font-size: bold;
+        }
+        .allinputOld{
+            display: flex;
+        }
+        .allinputNew{
+            display: flex;
+        }
+    </style>
 </head>
 <body>
-    <div class="card">
-        <header>
-            <h1>Age Calculator</h1>
-        </header>
+    <div class="allinputOld">
+        <div class="inputOne">
+            <input type="text" placeholder="Month" id="monthOne">
+        </div>
+        <div class="inputOne">
+            <input type="text" placeholder="Date" id="dateOne">
+        </div>
+        <div class="inputOne">
+            <input type="text" placeholder="Year" id="yearOne">
+        </div>
+        <br><br>
     </div>
-
-    <label>Enter Your Date of Birth</label><br>
-    <input type="date" id="inputDob" value="2004-05-05">
-    <br>
-    <div>
-        <label>Current Date</label><br>
-        <input type="date" id="cdate">
+    <div class="allinputNew">
+        <div class="inputTwo">
+            <input type="text" placeholder="Month" id="monthTwo">
+        </div>
+        <div class="inputOne">
+            <input type="text" placeholder="Date" id="dateTwo">
+        </div>
+        <div class="inputOne">
+            <input type="text" placeholder="Year" id="yaerTwo">
+        </div>
     </div>
     <br>
-    <button type="button" onclick="getDOB()">Calculate</button>
-    <br>
-    <div id="currentAgebd">
+    <button onclick="getDOB()">Calculate</button>
+    <br><br>
+    <div id="finalOutput">
 
     </div>
-
-    <script src="age.js"></script>
-
+    <script src="agetwo.js"></script>
 </body>
 </html>

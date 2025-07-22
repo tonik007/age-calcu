@@ -1,25 +1,20 @@
-function getDOB () {
-    const dobInput = document.getElementById(`inputDob`).value;
-    const currentDateInput = document.getElementById(`cdate`).value;
-    const dob = new Date(dobInput);
-    const currentDate = new Date (currentDateInput);
 
-    // calculate age
-
-    let age = currentDate.getFullYear() - dob.getFullYear();
-    const monthDiference = (currentDate.getMonth() - dob.getMonth());
-    
-    const hours = currentDate.getMinutes();
+function getDOB() {
+const monthOne = Number(document.getElementById(`monthOne`).value);
+const dateOne = document.getElementById(`dateOne`).value;
+const yearOne = document.getElementById(`yearOne`).value;
+// Two
+const monthTwo = Number(document.getElementById(`monthTwo`).value);
+const dateTwo = document.getElementById(`dateTwo`).value;
+const yaerTwo = document.getElementById(`yaerTwo`).value;
 
 
-    const dayDifference = (currentDate.getDate() > dob.getDate()) ? currentDate.getDate() - dob.getDate() : dob.getDate() - currentDate.getDate();
+const date = (dateOne > dateTwo) ? dateOne - dateTwo : dateTwo - dateOne;
+const month = (monthOne > monthTwo) ? monthOne - monthTwo : monthTwo - monthOne;
+const year = yaerTwo - yearOne;
 
-    // if (monthDiference < 0 || monthDiference === 0 && currentDate.getDate() < dob.getDate()) {
-    //     age --;
-    // }
 
-    document.getElementById(`currentAgebd`).textContent = `Your Age is ${age} years and ${monthDiference} month ${dayDifference} Days` 
+    document.getElementById(`finalOutput`).innerText = `${year} বছর ${month} মাস ${date} দিন`
+    // document.getElementById(`finalOutput`).innerHTML = `<label>Enter Your Date of Birth</label><br>
+    // <input type="date" id="inputDob" value="2004-05-05">`
 }
-
-
-
